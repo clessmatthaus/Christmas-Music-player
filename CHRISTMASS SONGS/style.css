@@ -1,0 +1,415 @@
+@font-face {
+    font-family: 'digital-clock-font';
+    src: url('digital-7.ttf');
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    font-family: 'digital-clock-font';
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+}
+
+.rebours-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textx {
+    font-size: 4rem;
+    font-family: 'digital-clock-font';
+    color: grey;
+    box-shadow: -4px 2px 9px red;
+}
+
+.title2 {
+  
+    margin-left: -10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    
+    font-family: 'Playfair Display', serif;
+    font-family: 'Shalimar', cursive;
+    border: 1px solid black;
+    background: black;
+    box-shadow: -6px 2px 9px black;
+    font-size: 1rem;
+    line-height: 3rem;
+    text-shadow: white;
+}
+
+.rebours-container>div {
+    margin: 0 3rem;
+    text-align: center;
+    border: 1px solid white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: -6px 2px 9px red;
+    cursor: pointer;
+    margin-top: -2px;
+}
+
+.cal {
+    color: black;
+    font-family: 'digital-clock-font';
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.division {
+    margin-left: 77px;
+    display: flex;
+    margin-bottom: -8px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.dynamique span {
+    font-family: 'digital-clock-font';
+    color: white;
+    font-size: 30px;
+}
+
+.static {
+    font-family: 'digital-clock-font';
+    color: white;
+    font-size: 45px;
+    box-shadow: -2px 4px 6px white;
+}
+
+.dynamique span::after {
+    content: "";
+    position: absolute;
+    left: 313px;
+    height: 2.5%;
+    width: 100%;
+    background: black;
+    border-left: 2px solid black;
+    animation: typing 1.5s steps(29) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+@media (max-width:992px) {
+    .rebours-container>div {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width:767px) {
+    .rebours-container {
+        flex-wrap: wrap;
+    }
+    .rebours-container>div {
+        margin: 1rem auto;
+        max-width: 150px;
+    }
+    .title2 {
+        font-size: 3rem;
+        line-height: 2.5rem;
+        margin: 10px 0px;
+        
+    }
+    .title2 span {
+        letter-spacing: 1rem;
+    }
+}
+
+.boite {
+    height: 400px;
+    width: 550PX;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 90px;
+    margin-left: 190px;
+}
+
+.boite::before,
+.boite::after {
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    background: linear-gradient(55deg, green, red, white, green, red, white, green, red, white);
+    background-size: 500%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.02);
+    animation: animate 10s infinite;
+}
+
+.boite::after {
+    filter: blur(20px);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#bton {
+    width: 303px;
+    height: 200px;
+    margin-top: -60px;
+    background-image: url("./images/noel.gif");
+    transform: rotate(-7deg) skewX(25deg) skewY(-5deg) translate(00, 0);
+    position: relative;
+    transition: all .2s;
+    border: 2px solid red;
+    box-shadow: -35px 35px 10px grey;
+    opacity: 5;
+}
+
+#a {
+    height: 50px;
+    width: 49px;
+    margin-left: 10px;
+    border-radius: 100%;
+    box-shadow: -2px 1px 1px 2px #850606;
+}
+
+#b {
+    height: 50px;
+    width: 49px;
+    margin-left: 175px;
+    border-radius: 100%;
+    box-shadow: -2px 1px 1px 2px #850606;
+}
+
+#bton::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -8px;
+    width: 8px;
+    height: 200px;
+    transform: skewY(-50deg);
+}
+
+#bton::after {
+    content: '';
+    position: absolute;
+    top: 197px;
+    left: -5px;
+    width: 309px;
+    height: 7px;
+    transform: skewX(-50deg);
+}
+
+#bton:hover {
+    transform: rotate(-30deg) skewX(35deg) translate(20px, -20px);
+    box-shadow: -35px 35px 10px green;
+    opacity: 9.5;
+}
+
+#bton::before,
+#bton::after {
+    background: linear-gradient(55deg, green, red, white, green, red, white, green, red, white);
+}
+
+.control {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+    transform: translate(-50%, -50%);
+}
+
+.controle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .4rem 0;
+    z-index: 1;
+}
+
+.controles {
+    color: red;
+    margin-left: 30%;
+    margin-top: -57px;
+}
+
+.progresscontainer,
+.volcontainer {
+    background: black;
+    height: 2px;
+    width: 90%;
+    cursor: pointer;
+    border: 2px solid grey;
+    margin: 10px 0;
+    margin-left: 15px;
+    box-shadow: -9px 9px 9px black;
+    border-radius: 35%;
+}
+
+.progressbar,
+.volprogress {
+    background-color: white;
+    border-radius: 5%;
+    height: 100%;
+    width: 0;
+    transition: width .1s linear;
+}
+
+.pic {
+    width: 50px;
+    height: 49px;
+    margin-left: 124px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    background: white;
+    box-shadow: 1px 1px 1px 1px grey;
+}
+
+#a,
+#b {
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.musicinfos {
+    overflow: hidden;
+}
+
+#prev,
+#play,
+#next,
+#stop,
+#volbasse,
+#volhaute {
+    color: white;
+    width: 30px;
+    height: 22px;
+    background: red;
+    cursor: pointer;
+    box-shadow: -7px 7px 7px black;
+    transition: all .1s;
+    border: 2px solid grey;
+    outline: none;
+    margin: 0 .15rem;
+    border-radius: 30%;
+}
+
+button:hover,
+button:active,
+button:focus {
+    box-shadow: grey;
+}
+
+#prev:active {
+    transform: translate(0, 5px);
+    border-bottom: 5px;
+}
+
+#play:active {
+    transform: translate(0, 5px);
+    border-bottom: 5px;
+}
+
+#next:active {
+    transform: translate(0, 5px);
+    border-bottom: 5px;
+}
+
+#stop:active {
+    transform: translate(0, 5px);
+    border-bottom: 5px;
+}
+
+#volbasse:active {
+    transform: translate(0, 5px);
+    border-bottom: 5px;
+}
+
+#volhaute:active {
+    transform: translate(0, 5px);
+    border-bottom: 5px;
+}
+
+.volbar {
+    width: 61%;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 0;
+}
+
+.volcontainer {
+    margin-left: -3px;
+}
+
+#title {
+    color: white;
+    font-weight: bold;
+    text-shadow: red;
+    width: 100%;
+    border: 1px solid #850606;
+    background: #850606;
+    text-align: center;
+    border: 2px solid #850606;
+    box-shadow: -7px 7px 7px red;
+}
+
+.musicinfos {
+    margin-left: -90px;
+}
+
+musicinfos {
+    margin-left: -90px;
+}

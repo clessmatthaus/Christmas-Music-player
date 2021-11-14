@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petemoss&family=Playfair+Display:wght@900&family=Shalimar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Petemoss&family=Shalimar&display=swap" rel="stylesheet">
+    <title>Christmass Songs</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="wrapper">
+        <div class="">
+            <h1 class="title2">---NOËL APPROCHE A GRANDS PAS, LE COMTE A REBOURS EST LANCE--- </h1>
+
+            <div class="rebours-container">
+                <div>
+                    <p id="days" class="textx">00</p>
+                    <span class="cal">Jours</span>
+                </div>
+                <div>
+                    <p id="hours" class="textx">00</p>
+                    <span class="cal">heures</span>
+                </div>
+                <div>
+                    <p id="minutes" class="textx">00</p>
+                    <span class="cal">minutes</span>
+                </div>
+                <div>
+                    <p id="seconds" class="textx">00</p>
+                    <span class="cal">Secondes</span>
+                </div>
+            </div>
+            <div class="division">
+                <div class="static">COUNTDOWN</div>
+                <ul class="dynamique">
+                    <li><span>Merry Christmas to everyone...</span></li>
+                    <li><span>Joyeux Noel a tous...</span></li>
+                </ul>
+            </div>
+            </di>
+
+            <div class="boite">
+                <div id="bton">
+                    <div id="player" class="player">
+                        <img src="images/nono.gif" alt="" id="a" />
+                        <img src="images/nono.gif" alt="" id="b" />
+
+                        <div class="controles">
+                            <div class="musicinfos">
+                                <h5 id="title"> Merry Christmas!! </h5>
+                            </div>
+                            <button id="prev"><i class="fas fa-backward "></i></button>
+                            <button id="play"><i class="fas fa-play play"></i></button>
+                            <button id="next"><i class="fas fa-forward next"></i></button>
+                            <button id="stop"><i class="fas fa-stop pause"></i></button>
+                        </div>
+                        <div class="progresscontainer" id="progresscontainer">
+                            <div class="progressbar" id="progressbar"></div>
+                        </div>
+                        <audio src="son/shalai.mp3" id="audio" type="audio/mp3"></audio>
+
+                        <div class="volbar" id="volbar">
+                            <button class="volbasse" id="volbasse"><i class="fas fa-volume-down"></i></button>
+                            <div class="volcontainer" id="volcontainer">
+                                <div class="volprogress" id="volprogress"></div>
+                            </div>
+                            <button id="volhaute"><i class="fas fa-volume-up"></i></button>
+
+                        </div>
+                        <div class="pic"><img src="images/boule-n.gif" alt="" id="c" /></div>
+                    </div>
+                </div>
+
+                <script type="text/javascript" src="main.js"></script>
+                <script type="text/javascript" src="script.js"></script>
+
+            </div>
+</body>
+
+</html>
